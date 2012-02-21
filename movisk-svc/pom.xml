@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>movisk</artifactId>
+		<groupId>com.uangel</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
 	<groupId>com.uangel</groupId>
-	<artifactId>movisk</artifactId>
-	<packaging>pom</packaging>
+	<artifactId>movisk-svc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>movisk Maven Webapp</name>
+	<packaging>war</packaging>
+	<name>movisk-svc Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-
-	<modules>
-		<module>movisk-core</module>
-		<module>movisk-cms</module>
-		<module>movisk-svc</module>
-	</modules>
 
 	<dependencies>
 		<dependency>
@@ -24,7 +24,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>movisk</finalName>
+		<finalName>movisk-svc</finalName>
 
 		<plugins>
 			<plugin>
@@ -32,7 +32,7 @@
 				<version>2.1.1</version>
 				<configuration>
 					<warSourceDirectory>webapp</warSourceDirectory>
-					<warName>movisk</warName>
+					<warName>movisk-svc</warName>
 				</configuration>
 			</plugin>
 
@@ -49,5 +49,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
