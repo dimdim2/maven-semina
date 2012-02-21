@@ -7,9 +7,8 @@
 		<groupId>com.uangel</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.uangel</groupId>
+
 	<artifactId>movisk-batch</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>movisk-batch Maven Webapp</name>
 	<url>http://maven.apache.org</url>

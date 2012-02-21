@@ -5,7 +5,7 @@
 	<artifactId>movisk</artifactId>
 	<packaging>pom</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>movisk Maven Webapp</name>
+	<name>movisk</name>
 	<url>http://maven.apache.org</url>
 
 	<modules>
@@ -14,15 +14,6 @@
 		<module>movisk-svc</module>
 		<module>movisk-batch</module>
 	</modules>
-
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
 
 	<profiles>
 		<profile>
@@ -91,6 +82,15 @@
 		</resources>
 
 		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<srource>1.6</srource>
+					<target>1.6</target>
+					<encoding>utf-8</encoding>
+				</configuration>
+			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
