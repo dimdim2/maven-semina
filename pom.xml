@@ -3,10 +3,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.uangel</groupId>
 	<artifactId>movisk</artifactId>
-	<packaging>war</packaging>
+	<packaging>pom</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>movisk Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+
+	<modules>
+		<module>movisk-core</module>
+	</modules>
 
 	<dependencies>
 		<dependency>
@@ -43,4 +47,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
