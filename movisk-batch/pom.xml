@@ -3,9 +3,10 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>movisk</artifactId>
+		<artifactId>movisk-web-parent</artifactId>
 		<groupId>com.uangel</groupId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0.0</version>
+		<relativePath>../movisk-web-parent</relativePath>
 	</parent>
 
 	<artifactId>movisk-batch</artifactId>
@@ -13,38 +14,7 @@
 	<name>movisk-batch Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
-	<dependencies>
-		<dependency>
-			<groupId>com.uangel</groupId>
-			<artifactId>movisk-core</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
-
 	<build>
 		<finalName>movisk-batch</finalName>
-
-		<plugins>
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.1.1</version>
-				<configuration>
-					<warSourceDirectory>webapp</warSourceDirectory>
-					<warName>movisk-batch</warName>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.8</version>
-				<configuration>
-					<downloadSource>true</downloadSource>
-					<downloadJavadocs>true</downloadJavadocs>
-					<wtpversion>2.0</wtpversion>
-					<wtpContextName>/</wtpContextName>
-				</configuration>
-			</plugin>
-		</plugins>
 	</build>
 </project>

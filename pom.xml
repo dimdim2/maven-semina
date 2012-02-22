@@ -4,7 +4,7 @@
 	<groupId>com.uangel</groupId>
 	<artifactId>movisk</artifactId>
 	<packaging>pom</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>movisk</name>
 	<url>http://maven.apache.org</url>
 
@@ -13,9 +13,28 @@
 		<module>movisk-cms</module>
 		<module>movisk-svc</module>
 		<module>movisk-batch</module>
+		<module>movisk-web-parent</module>
 	</modules>
 
+	<properties>
+		<jetty.version>6.1.22</jetty.version>
+	</properties>
+
 	<dependencies>
+		<!-- Jetty Server -->
+		<dependency>
+			<groupId>org.mortbay.jetty</groupId>
+			<artifactId>jetty</artifactId>
+			<version>${jetty.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mortbay.jetty</groupId>
+			<artifactId>jsp-2.1-jetty</artifactId>
+			<version>${jetty.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -92,6 +111,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
 				<configuration>
 					<srource>1.6</srource>
 					<target>1.6</target>
@@ -108,6 +128,24 @@
 					<downloadJavadocs>true</downloadJavadocs>
 				</configuration>
 			</plugin>
+
+			<!-- jetty plugin
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.1.10</version>
+				<configuration>
+					<scanIntervalSeconds>3</scanIntervalSeconds>
+					<contextPath>/</contextPath>
+					<connectors>
+						<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+							<port>8080</port>
+						</connector>
+					</connectors>
+				</configuration>
+			</plugin>
+			-->
+
 		</plugins>
 	</build>
 

@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>movisk</artifactId>
 		<groupId>com.uangel</groupId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0.0</version>
 		<relativePath>..</relativePath>
 	</parent>
 	<artifactId>movisk-core</artifactId>
