@@ -16,6 +16,33 @@
 		<org.slf4j-version>1.6.1</org.slf4j-version>
 	</properties>
 
+	<profiles>
+		<profile>
+			<id>local</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<environment>local</environment>
+				<mysql.jdbc.version>5.1.18</mysql.jdbc.version>
+			</properties>
+		</profile>
+		<profile>
+			<id>development</id>
+			<properties>
+				<environment>development</environment>
+				<mysql.jdbc.version>5.1.18</mysql.jdbc.version>
+			</properties>
+		</profile>
+		<profile>
+			<id>service</id>
+			<properties>
+				<environment>service</environment>
+				<mysql.jdbc.version>5.0.2</mysql.jdbc.version>
+			</properties>
+		</profile>
+	</profiles>
+
 	<dependencies>
 		<!-- Commons -->
 		<dependency>
@@ -203,7 +230,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.18</version>
+			<version>${mysql.jdbc.version}</version>
 		</dependency>
 
 		<!-- uangel-platform -->
@@ -245,6 +272,21 @@
 
 	<build>
 		<finalName>movisk</finalName>
+
+		<resources>
+			<resource>
+				<directory>src\main\resources</directory>
+			</resource>
+			<resource>
+				<directory>src\main\resources-${environment}</directory>
+			</resource>
+			<resource>
+				<directory>src\main\java</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
 
 		<plugins>
 			<plugin>
