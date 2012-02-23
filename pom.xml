@@ -3,10 +3,17 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.uangel</groupId>
 	<artifactId>movisk</artifactId>
-	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<version>1.0.0</version>
 	<name>movisk Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+
+	<modules>
+		<module>movisk-core</module>
+		<module>movisk-cms</module>
+		<module>movisk-svc</module>
+		<module>movisk-batch</module>
+	</modules>
 
 	<properties>
 		<java.version>1.6</java.version>
@@ -103,16 +110,6 @@
 			<artifactId>spring-asm</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
 
 		<!-- spring dependency -->
         <dependency>
@@ -197,23 +194,6 @@
             </exclusions>
         </dependency>
 
-        <!-- jsp tag library -->
-		<dependency>
-			<groupId>displaytag</groupId>
-			<artifactId>displaytag</artifactId>
-			<version>1.2</version>
-		</dependency>
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
-		</dependency>
-		<dependency>
-			<groupId>taglibs</groupId>
-			<artifactId>standard</artifactId>
-			<version>1.1.2</version>
-		</dependency>
-
 		<!-- Jackson JSON -->
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
@@ -260,14 +240,6 @@
 			<version>1.4</version>
 		</dependency>
 
-		<!-- Servlet -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
-			<scope>provided</scope>
-		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -301,15 +273,6 @@
 			</plugin>
 
 			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.1.1</version>
-				<configuration>
-					<warSourceDirectory>webapp</warSourceDirectory>
-					<warName>movisk</warName>
-				</configuration>
-			</plugin>
-
-			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
 				<version>2.8</version>
@@ -322,8 +285,6 @@
                     </additionalBuildcommands>
 					<downloadSource>true</downloadSource>
 					<downloadJavadocs>true</downloadJavadocs>
-					<wtpversion>2.0</wtpversion>
-					<wtpContextName>/</wtpContextName>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -344,4 +305,5 @@
 			<url>http://maven.springframework.org/release</url>
 		</repository>
 	</repositories>
+
 </project>
