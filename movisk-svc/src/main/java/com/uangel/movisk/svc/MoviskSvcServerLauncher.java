@@ -2,10 +2,10 @@ package com.uangel.movisk.svc;
 
 import com.uangel.movisk.web.jetty.JettyServer;
 
-public class JettyServerLauncher {
+public class MoviskSvcServerLauncher {
 
 	public static void main(String[] args) throws Exception {
-		final Integer port = 7070;
+		final Integer port = 8080;
 		final String webapp = "webapp";
 		final String webappConfiguration = "src/main/java/com/uangel/movisk/svc/jetty-web.xml";
 		final String coreTargetClasses = "../movisk-core/target/classes";
