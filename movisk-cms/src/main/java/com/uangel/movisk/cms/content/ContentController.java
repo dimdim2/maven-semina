@@ -23,7 +23,7 @@ import org.springframework.web.bind.support.SessionStatus;
 import com.uangel.movisk.content.model.Content;
 import com.uangel.movisk.content.service.ContentService;
 import com.uangel.platform.model.Pageable;
-import com.uangel.platform.support.web.PaginatedListImpl;
+import com.uangel.platform.web.PaginatedListImpl;
 
 @Controller
 @SessionAttributes("content")

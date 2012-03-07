@@ -21,7 +21,7 @@
 		<maven.test.skip>true</maven.test.skip>
 		<spring.version>3.1.0.RELEASE</spring.version>
 		<org.slf4j-version>1.6.1</org.slf4j-version>
-		<jetty.version>6.1.22</jetty.version>
+		<jetty.version>6.1.26</jetty.version>
 	</properties>
 
 	<dependencies>
@@ -181,24 +181,6 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.8.2</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.unitils</groupId>
-			<artifactId>unitils-core</artifactId>
-			<version>3.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.unitils</groupId>
-			<artifactId>unitils-database</artifactId>
-			<version>3.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.hsqldb</groupId>
-			<artifactId>hsqldb</artifactId>
-			<version>2.2.6</version>
 			<scope>test</scope>
 		</dependency>
 
